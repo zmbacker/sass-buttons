@@ -21,13 +21,13 @@ Install gem from the command line:
 Installing Sass Buttons:
 
     # Edit the project configuration file and add:
-    require 'sassy-buttons'
+    require 'sass-buttons'
 
     # From the command line:
-    compass install sassy-buttons
+    compass install sass-buttons
 
-    #import sassy buttons partial into your sass/scss file
-    @import "sassy-buttons"
+    #import sass buttons partial into your sass/scss file
+    @import "sass-buttons"
 
 
 
