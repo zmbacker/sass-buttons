@@ -224,6 +224,31 @@ button#{$unicorn-btn-namespace}:disabled {
     $unicorn-btn-color: nth($unicorn-btn-action, 3);
 
     // .button-primary .button-action etc.
+
+
+    @if $unicorn-btn-new-name != ''{
+        #{$unicorn-btn-namespace}-#{$unicorn-btn-new-name} {
+            @include background(linear-gradient(top,  lighten($unicorn-btn-background, 5%), darken($unicorn-btn-background, 5%)));
+            background-color: $unicorn-btn-background;
+            border-color: darken($unicorn-btn-background, 10%);
+            color: $unicorn-btn-color;
+            text-shadow: 0 -1px 1px rgba(darken($unicorn-btn-background, 30%), 0.35);
+
+            &:hover {
+                background-color: $unicorn-btn-background;
+                @include background(linear-gradient(top,  lighten($unicorn-btn-background, 10%), darken($unicorn-btn-background, 5%)));
+            }
+            &:active {
+                background: desaturate($unicorn-btn-background, 20%);
+                color: darken($unicorn-btn-background, 20%);
+            }
+        }
+    }
+
+
+
+
+
     #{$unicorn-btn-namespace}-#{$unicorn-btn-name} {
         @include background(linear-gradient(top,  lighten($unicorn-btn-background, 5%), darken($unicorn-btn-background, 5%)));
         background-color: $unicorn-btn-background;
